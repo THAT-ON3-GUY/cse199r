@@ -1,0 +1,6 @@
+<h1>Ingredients</h1>
+<ul>
+  {% for item in ingredients %}
+    <li>{{ item.name }} — aisle {{ item.aisle }} — ${{ item.price }}</li>
+  {% endfor %}
+</ul>
