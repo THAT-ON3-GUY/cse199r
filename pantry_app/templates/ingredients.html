@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingredients</title>
+</head>
+<body>
+
+<h1>Ingredients</h1>
+
+<ul>
+    {% for ingredient in ingredients %}
+        <li>
+            {{ ingredient.ingredient_name }}
+            <form action="/ingredients/delete/{{ ingredient.ingredient_id }}" method="post">
+        </li>
+    {% endfor %}
+</ul>
+
+
+<h2>Add Ingredient</h2>
+<form action="/ingredients/add" method="post">
+    <input type="text" name="ingredient_name" placeholder="Ingredient name" required>
+    <button type="submit">Add</button>
+</form>
+
+</body>
+</html>
